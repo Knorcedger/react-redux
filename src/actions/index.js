@@ -1,16 +1,14 @@
-export const ADD_TODO = 'ADD_TODO';
-export const TOGGLE_TODO = 'TOGGLE_TODO';
+export const SHOW_LOADER = 'SHOW_LOADER';
+export const HIDE_LOADER = 'HIDE_LOADER';
 
-export function addTodo(text) {
+export function showLoader() {
 	return {
-		type: ADD_TODO,
-		text
+		type: SHOW_LOADER
 	}
 };
 
-export function toggleTodo(index) {
+export function hideLoader() {
 	return {
-		type: TOGGLE_TODO,
-		index
+		type: HIDE_LOADER
 	}
 };
