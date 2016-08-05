@@ -1,8 +1,14 @@
+import React from 'react';
 import LoginForm from '../components/LoginForm';
 import {connect} from 'react-redux';
 import {showLoader, hideLoader} from '../actions';
 
+let HomepageLoginForm = ({showLoader, login}) => (
+	<LoginForm showLoader={showLoader} onSubmit={login} />
+);
+
 const mapStateToProps = (state) => {
+	// console.log('mapStateToProps');
 	return {
 		showLoader: state.loader.show
 	}
@@ -23,14 +29,14 @@ const mapDispatchToProps = (dispatch) => {
 					dispatch(hideLoader());
 				});
 			console.log('login!!');
-			dispatch(showLoader())
+			dispatch(showLoader());
 		}
 	}
 }
 
-const HomepageLoginForm = connect(
+HomepageLoginForm = connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(LoginForm);
+)(HomepageLoginForm);
 
 export default HomepageLoginForm;
