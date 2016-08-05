@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import LoginForm from './components/LoginForm';
+import HomepageLoginForm from './containers/HomepageLoginForm';
 
 class App extends Component {
 
@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <LoginForm />
+        <HomepageLoginForm />
       </div>
     );
   }
